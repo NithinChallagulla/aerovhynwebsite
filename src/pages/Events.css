@@ -1,0 +1,51 @@
+.events-page {
+  background: #020817;
+  min-height: 100vh;
+  padding: 120px 8%;
+  color: white;
+}
+
+.events-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.events-title h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.events-title p {
+  max-width: 850px;
+  margin: 20px auto;
+  color: #94a3b8;
+}
+
+.timeline {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.timeline-item {
+  background: rgba(15,23,42,.9);
+  border-left: 4px solid #22d3ee;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 0 15px 15px 0;
+  transition: .3s;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(34,211,238,.15);
+}
+
+.timeline-item h3 {
+  color: #22d3ee;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}

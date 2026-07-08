@@ -1,0 +1,93 @@
+/* Dark Theme Colors */
+.bg-dark { background-color: #0d1117; }
+.bg-darker { background-color: #090c10; }
+.bg-dark-card { background-color: #161b22; }
+.text-light { color: #e6edf3; }
+.text-highlight { color: #00c3ff; }
+.text-primary { color: #ffffff; }
+.text-accent { color: #c9d1d9; }
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px) scale(0.98); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px) scale(0.98); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-in-left { animation: slideInLeft 1s ease-out forwards; }
+.animate-slide-in-right { animation: slideInRight 1s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 1.2s ease-in-out forwards; }
+.animate-slide-up { animation: slideUp 1s ease-out forwards; }
+
+/* Our Values Cards - Solid Dark Inside + Neon Glow Outside on Hover */
+.value-card {
+  background-color: #161b22; /* Always dark inside */
+  border-radius: 1rem;
+  position: relative;
+  overflow: visible;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+  color: #e6edf3;
+  padding: 2rem;
+  text-align: center;
+}
+
+.value-card {
+  position: relative;
+  background-color: #161b22; /* Always solid dark inside */
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: #e6edf3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden; /* Prevent gradient from spilling inside */
+  z-index: 1; /* Keep content above glow */
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 23, 23, 0.6) 0%,
+    rgba(17, 17, 17, 0.6) 50%,
+    rgba(23, 23, 23, 0.6) 0%
+    rgba(23, 23, 23, 0.6) 0%
+  );
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1; /* Keep it behind card */
+}
+
+.value-card:hover::before {
+  opacity: 1;
+}
+
+.value-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow:
+    0 0 20px 4px rgba(191, 95, 255, 0.7),
+    0 0 30px 10px rgba(0, 195, 255, 0.7);
+}
+
+.icon-wrapper {
+  background-color: rgba(0, 195, 255, 0.15); /* soft highlight */
+  border-radius: 50%;
+}

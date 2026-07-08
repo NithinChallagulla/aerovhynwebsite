@@ -1,0 +1,52 @@
+/* Add this CSS to your global stylesheet */
+
+/* The base style for the spotlight overlay */
+.hover-spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* This ensures the overlay doesn't block clicks on the card */
+}
+
+/* On hover of the parent group, make the spotlight visible */
+.group:hover .hover-spotlight {
+  opacity: 1;
+}
+
+/* Dark theme colors for Tailwind classes */
+/* Replace 'bg-light' and 'bg-white' with dark equivalents */
+.bg-light {
+  background-color: #1f2937; /* A dark gray background */
+}
+.bg-white {
+  background-color: #111827; /* A very dark background for cards */
+}
+.text-primary {
+  color: #d1d5db; /* A light gray text for primary content */
+}
+.text-accent {
+  color: #9ca3af; /* A slightly darker gray for secondary text */
+}
+
+/* Ensure other styles are compatible with the dark theme */
+/* For example, for filter buttons */
+.bg-gray-900 {
+  background-color: #10151f; /* A darker gray for the filter bar */
+}
+.bg-gray-800 {
+  background-color: #1f2937; /* A medium dark gray for card backgrounds */
+}
+.text-gray-400 {
+  color: #9ca3af; /* Light gray for readability */
+}
+.text-white {
+  color: #ffffff; /* White text */
+}
+.text-highlight {
+  color: #4f46e5; /* Your highlight color, e.g., an indigo blue */
+}

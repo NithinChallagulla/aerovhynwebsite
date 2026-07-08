@@ -1,0 +1,18 @@
+.interactive-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.interactive-card.rise-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.interactive-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
