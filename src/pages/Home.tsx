@@ -69,76 +69,92 @@ export default function Home() {
       </Helmet>
 
       {/* ─────────── Hero Section ─────────── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover brightness-50"
+<section className="relative min-h-screen overflow-hidden bg-gray-900">
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover brightness-50"
+  >
+    <source src="/videos/hero-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(41,182,246,0.2),transparent_40%),radial-gradient(ellipse_at_bottom_right,rgba(81,45,168,0.3),transparent_50%)] pointer-events-none" />
+
+  {/* Hero Content */}
+  <div className="relative z-10 flex flex-col items-center min-h-screen px-4 sm:px-6 lg:px-8">
+
+    {/* Logo & Company Name */}
+    <div className="pt-40 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+      <div
+        className="opacity-0 animate-slide-in-left"
+        style={{
+          animationDelay: "0.2s",
+          animationFillMode: "forwards",
+        }}
+      >
+        <img
+          src={Logo}
+          alt="AEROVHYN TECHNOLOGIES"
+          className="h-28 sm:h-32 w-auto drop-shadow-xl"
+        />
+      </div>
+
+      <h2
+        className="text-4xl sm:text-6xl font-heading font-bold text-white tracking-wide opacity-0 animate-slide-in-right"
+        style={{
+          animationDelay: "0.8s",
+          animationFillMode: "forwards",
+        }}
+      >
+        AEROVHYN TECHNOLOGIES
+      </h2>
+    </div>
+
+    {/* Main Heading - Moved Lower */}
+    <div className="mt-36 text-center max-w-4xl">
+      <h1 className="text-5xl sm:text-7xl font-heading font-extrabold text-white leading-tight drop-shadow">
+        Smart Tech
+        <span className="block text-highlight">
+          Smarter World
+        </span>
+      </h1>
+
+      <p className="mt-8 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+        Pioneering the future of aerospace technology with innovative UAV
+        solutions and intelligent embedded systems.
+      </p>
+
+      <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        <Link
+          to="/about"
+          className="inline-flex items-center justify-center px-10 py-4 rounded-lg font-semibold text-white bg-highlight shadow-lg transition-all duration-300 hover:scale-105 hover:bg-highlight/80"
         >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          Learn More
+          <ArrowRight className="ml-3 h-5 w-5" />
+        </Link>
 
-        {/* Glitter Effect Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(41,182,246,0.2),transparent_40%),radial-gradient(ellipse_at_bottom_right,rgba(81,45,168,0.3),transparent_50%)] pointer-events-none" />
+        <Link
+          to="/contact"
+          className="inline-flex items-center justify-center px-10 py-4 rounded-lg font-semibold text-white border-2 border-white bg-white/10 backdrop-blur-md shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105"
+        >
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
 
-        {/* Main Content */}
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-6 sm:gap-10 mb-10">
-            <div
-              className="flex justify-center sm:justify-end opacity-0 animate-slide-in-left"
-              style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
-            >
-              <img
-                src={Logo}
-                alt="AEROVHYN TECHNOLOGIES"
-                className="h-28 sm:h-32 w-auto drop-shadow-xl"
-              />
-            </div>
-            <h2
-              className="text-4xl sm:text-6xl font-heading font-bold text-white tracking-wide opacity-0 animate-slide-in-right"
-              style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
-            >
-              AEROVHYN&nbsp;TECHNOLOGIES
-            </h2>
-          </div>
-
-          <h1 className="text-5xl sm:text-7xl font-heading font-extrabold text-white mb-6 leading-tight drop-shadow">
-            Smart Tech
-            <span className="block text-highlight">Smarter&nbsp;World</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Pioneering the future of aerospace technology with innovative UAV
-            solutions and intelligent embedded systems.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/about"
-              className="inline-flex items-center px-10 py-4 rounded-lg font-semibold text-white bg-highlight shadow-lg transition-all duration-300 hover:scale-105 hover:bg-highlight/80"
-            >
-              Learn More
-              <ArrowRight className="ml-3 h-5 w-5" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-10 py-4 rounded-lg font-semibold text-white border-2 border-white bg-white/10 backdrop-blur-md shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="h-10 w-6 rounded-full border-2 border-white flex justify-center">
-            <div className="h-3 w-1 mt-2 rounded-full bg-white animate-pulse" />
-          </div>
-        </div>
-      </section>
+  {/* Scroll Indicator */}
+  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <div className="h-10 w-6 rounded-full border-2 border-white flex justify-center">
+      <div className="h-3 w-1 mt-2 rounded-full bg-white animate-pulse" />
+    </div>
+  </div>
+</section>
 
       {/* ─────────── Services Section ─────────── */}
       <section className="py-24 bg-gray-900 relative">
