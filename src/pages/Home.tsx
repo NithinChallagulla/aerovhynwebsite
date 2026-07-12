@@ -94,7 +94,7 @@ export default function Home() {
             >
               <img
                 src={Logo}
-                alt="AEROVHYN Technologies"
+                alt="AEROVHYN TECHNOLOGIES"
                 className="h-28 sm:h-32 w-auto drop-shadow-xl"
               />
             </div>
