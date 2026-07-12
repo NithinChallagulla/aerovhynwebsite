@@ -116,7 +116,7 @@ export default function Home() {
     </div>
 
     {/* Main Heading - Moved Lower */}
-    <div className="mt-76 text-center max-w-4xl">
+    <div className="mt-66 text-center max-w-4xl">
       <h1 className="text-5xl sm:text-7xl font-heading font-extrabold text-white leading-tight drop-shadow">
         Smart Tech
         <span className="block text-highlight">
