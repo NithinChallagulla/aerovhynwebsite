@@ -102,7 +102,7 @@ export default function Home() {
               className="text-4xl sm:text-6xl font-heading font-bold text-white tracking-wide opacity-0 animate-slide-in-right"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              AEROVHYN&nbsp;Technologies
+              AEROVHYN&nbsp;TECHNOLOGIES
             </h2>
           </div>
 
