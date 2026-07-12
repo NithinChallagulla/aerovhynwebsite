@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>AEROVHYN Technologies – Smart Tech, Smarter World</title>
+        <title>AEROVHYN TECHNOLOGIES – Smart Tech, Smarter World</title>
         <meta
           name="description"
           content="Leading UAV & aerospace innovator. Specialising in drone tech, surveillance systems and embedded intelligence."
