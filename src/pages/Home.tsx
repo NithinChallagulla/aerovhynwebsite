@@ -116,13 +116,8 @@ export default function Home() {
     </div>
 
     {/* Main Heading - Moved Lower */}
-    <div className="mt-56 text-center max-w-4xl">
-      <h1 className="text-5xl sm:text-7xl font-heading font-extrabold text-white leading-tight drop-shadow">
-        Smart Tech
-        <span className="block text-highlight">
-          Smarter World
-        </span>
-      </h1>
+    <div className="mt-36 text-center max-w-4xl">
+      
 
       <p className="mt-8 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
         Pioneering the future of aerospace technology with innovative UAV
