@@ -116,7 +116,7 @@ export default function Home() {
     </div>
 
     {/* Main Heading - Moved Lower */}
-    <div className="mt-36 text-center max-w-4xl">
+    <div className="mt-46 text-center max-w-4xl">
       
 
       <p className="mt-8 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
